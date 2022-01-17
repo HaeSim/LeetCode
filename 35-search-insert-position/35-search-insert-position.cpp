@@ -2,6 +2,8 @@ class Solution {
 public:
     int searchInsert(vector<int>& nums, int target) {
         
+        std::ios::sync_with_stdio(false);
+        
         int s = 0, e = nums.size() - 1;
         int mid;
         while(s < e)
