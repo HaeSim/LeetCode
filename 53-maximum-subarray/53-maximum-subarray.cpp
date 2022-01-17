@@ -2,6 +2,8 @@ class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
      
+        std::ios::sync_with_stdio(false);
+        
         if(nums.size() == 1)
             return nums[0];
         
