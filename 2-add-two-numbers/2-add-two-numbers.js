@@ -16,19 +16,19 @@ var addTwoNumbers = function(l1, l2) {
     let sum = new ListNode()
     let head = sum
     while(flag) {
-        let temp1 = sum.val + (l1===null ? 0 : l1.val) + (l2===null ? 0 : l2.val) 
-        let temp2 = 0
-        if(temp1>=10) {
-            temp1 = temp1-10
-            temp2++
+        let sumVal = sum.val + (l1===null ? 0 : l1.val) + (l2===null ? 0 : l2.val) 
+        let carry = 0
+        if(sumVal>=10) {
+            sumVal = sumVal-10
+            carry++
         }
         l1 = (l1===null ? null : l1.next)
         l2 = (l2===null ? null : l2.next)
-        sum.val = temp1
-        if(temp2 === 0 && l1 === null && l2 === null) {
+        sum.val = sumVal
+        if(carry === 0 && l1 === null && l2 === null) {
             flag = false
         } else {
-            sum.next = new ListNode(temp2, null)
+            sum.next = new ListNode(carry, null)
             sum = sum.next
         }
     }
