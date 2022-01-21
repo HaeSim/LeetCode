@@ -3,7 +3,7 @@
  * @return {number}
  */
 var rob = function(nums) {
-    let dp = new Array(101);
+    let dp = [];
     if(nums.length < 3) {
        return Math.max(nums[0], nums[1] === undefined ? 0 : nums[1]);
     }
