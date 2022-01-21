@@ -3,12 +3,9 @@ class Solution:
         map = dict()
         
         for i in range(len(nums)):
-            if i == 0:
-                map[target-nums[i]] = i
+            if nums[i] in map.keys():
+                return [map[nums[i]],i]
             else:
-                if nums[i] in map.keys():
-                    return [map[nums[i]],i]
-                else:
-                    map[target-nums[i]] = i
+                map[target-nums[i]] = i
        
         
