@@ -15,8 +15,6 @@ const helper = (curNode, sum, targetSum) => {
     if(curNode.right !== null) {
         rightFind = helper(curNode.right, sum, targetSum);
     }
-    
-    console.log(leftFind, rightFind, leftFind || rightFind);
     return leftFind || rightFind;
 }
 
